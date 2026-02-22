@@ -1,0 +1,135 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Desktop Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #14202E;
+  border-right: 1px solid rgba(95, 179, 161, 0.15);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sidebar-header {
+  border-bottom: 2px solid #5FB3A1;
+  padding-bottom: 1.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F0F0F0;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-subtitle {
+  font-size: 0.875rem;
+  color: #5FB3A1;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: none;
+  border: none;
+  color: #F0F0F0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background-color: rgba(95, 179, 161, 0.08);
+  color: #5FB3A1;
+}
+
+.nav-item.active {
+  background-color: rgba(95, 179, 161, 0.12);
+  border-left-color: #5FB3A1;
+  color: #5FB3A1;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 280px;
+  flex: 1;
+  width: calc(100% - 280px);
+}
+
+/* Mobile Bottom Tab Bar */
+.mobile-tab-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #14202E;
+    border-top: 1px solid rgba(95, 179, 161, 0.15);
+    padding: 0.5rem 0.25rem;
+    z-index: 100;
+  }
+
+  .mobile-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.25rem;
+    background: none;
+    border: none;
+    color: #F0F0F0;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    border-top: 2px solid transparent;
+  }
+
+  .mobile-tab span {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .mobile-tab.active {
+    color: #5FB3A1;
+    border-top-color: #5FB3A1;
+  }
+
+  .mobile-tab:hover {
+    color: #5FB3A1;
+  }
+}
