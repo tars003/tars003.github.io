@@ -122,6 +122,11 @@
   display: none;
 }
 
+/* Mobile Floating Resume Button */
+.mobile-resume-button {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -171,5 +176,38 @@
 
   .mobile-tab:hover {
     color: #5FB3A1;
+  }
+
+  .mobile-resume-button {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: rgba(95, 179, 161, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(95, 179, 161, 0.3);
+    border-radius: 50px;
+    color: #5FB3A1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 90;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-resume-button:hover {
+    background-color: rgba(95, 179, 161, 0.25);
+    border-color: rgba(95, 179, 161, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-resume-button span {
+    font-family: 'JetBrains Mono', monospace;
   }
 }
