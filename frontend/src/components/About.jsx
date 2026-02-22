@@ -1,7 +1,10 @@
 import React from 'react';
+import { Download } from 'lucide-react';
 import './About.css';
 
 const About = () => {
+  const resumeLink = "https://drive.google.com/file/d/1mO6jx3GMz1VqnAJAvo6ApJzPIcd1VkvP/view?usp=sharing";
+
   return (
     <div className="section-container about-section">
       <h2 className="section-title">About</h2>
@@ -15,6 +18,16 @@ const About = () => {
         <p>My background is primarily Node.js and Python on the backend, AWS and GCP on the infrastructure side, and LLM orchestration on the AI side. I've built systems that ingest tens of millions of records daily, and separately, systems that chain foundational AI models together to automate workflows that previously required entire teams.</p>
         
         <p>I'm not a specialist. I'm the engineer you bring in when the problem doesn't fit neatly into one category.</p>
+
+        <a 
+          href={resumeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-link-inline"
+        >
+          <Download size={18} />
+          <span>View Resume</span>
+        </a>
       </div>
     </div>
   );
