@@ -41,3 +41,11 @@ a:hover {
     padding: 2rem 1.5rem 6rem 1.5rem;
   }
 }
+
+/* Hide platform watermark/badge as per project requirements */
+#emergent-badge,
+a[href*="emergent.sh"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
