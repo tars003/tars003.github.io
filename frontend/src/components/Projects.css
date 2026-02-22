@@ -1,0 +1,98 @@
+.projects-section .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5FB3A1;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #5FB3A1;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(95, 179, 161, 0.25);
+  border-radius: 6px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(95, 179, 161, 0.4);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #F0F0F0;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(240, 240, 240, 0.9);
+  margin-bottom: 1.5rem;
+  white-space: pre-line;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.project-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.875rem;
+  background-color: transparent;
+  border: 1px solid #5FB3A1;
+  color: #5FB3A1;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.project-tag:hover {
+  background-color: rgba(95, 179, 161, 0.1);
+}
+
+@media (max-width: 768px) {
+  .projects-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .project-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+  }
+}

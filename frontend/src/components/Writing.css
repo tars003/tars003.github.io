@@ -1,0 +1,34 @@
+.writing-section .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5FB3A1;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.writing-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #5FB3A1;
+}
+
+.writing-content {
+  font-size: 1.05rem;
+  color: rgba(240, 240, 240, 0.8);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .writing-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .writing-content {
+    font-size: 1rem;
+  }
+}
