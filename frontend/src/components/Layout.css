@@ -12,15 +12,16 @@
   height: 100vh;
   background-color: #14202E;
   border-right: 1px solid rgba(95, 179, 161, 0.15);
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .sidebar-header {
   border-bottom: 2px solid #5FB3A1;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  flex-shrink: 0;
 }
 
 .sidebar-title {
@@ -42,27 +43,53 @@
   flex-direction: column;
   gap: 0.5rem;
   flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.5rem;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(95, 179, 161, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 179, 161, 0.5);
 }
 
 .sidebar-footer {
   display: flex;
   gap: 1rem;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid rgba(95, 179, 161, 0.15);
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   color: #F0F0F0;
   background-color: rgba(95, 179, 161, 0.08);
   border-radius: 50%;
   transition: all 0.2s ease;
   text-decoration: none;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-icon:hover {
